@@ -1,0 +1,391 @@
+
+<!-- saved from url=(0079)file:///C:/Users/dilka/Downloads/Personal%20Data/Resume/Resume%20generator.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Resume generator</title>
+	<link rel="stylesheet" type="text/css" href="./Resume generator_files/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/scroll.css"> -->
+	<link rel="stylesheet" type="text/css" href="./Resume generator_files/column_scroll.css">
+	<link rel="stylesheet" type="text/css" href="./Resume generator_files/thin_scroll.css">
+	<link rel="stylesheet" type="text/css" href="./Resume generator_files/theme.css">
+	<link rel="stylesheet" type="text/css" href="./Resume generator_files/main.css">
+	<link href="./Resume generator_files/css" rel="stylesheet" type="text/css">
+	<link href="./Resume generator_files/css(1)" rel="stylesheet" type="text/css">
+	<meta name="description" content="Online document editor like interface to create and save Resume">
+	<meta name="keywords" content="resume,cv,maker,creator,generator,iit,guwahati,iitg">
+</head>
+
+<body class="">
+
+<div class="container-fluid">
+
+	<div class="row">
+
+
+		<div class="col-sm-3 no-print" id="left">
+
+			<div id="panel">
+
+				<div id="notice">
+					<h4><i class="glyphicon glyphicon-exclamation-sign"></i> This link is outdated as of now.<br></h4>
+					<h4>Please use <a href="http://nitish6174.com/resume-generator/">nitish6174.com</a> till the updates are added to this link.</h4>
+				</div>
+
+				<button class="btn btn-block btn-primary" data-toggle="modal" data-target="#usageModal">VIEW INSTRUCTIONS</button>
+				<button class="btn btn-block btn-success" onclick="window.print()">PRINT AS PDF</button>
+
+				<hr>
+
+				<h3 class="text-center">Template settings</h3>
+				<button id="defaultTemplateBtn" class="btn btn-block btn-default" onclick="template(&#39;default&#39;);">Use official IITG template</button>
+				<button id="customTemplateBtn" class="btn btn-block btn-danger" onclick="template(&#39;custom&#39;);">Use custom template</button>
+				<h5>
+					Minor
+					<div class="toggle-button">
+						<div class="toggle-option" data-toggle="minor" id="minorShow">Show</div>
+						<div class="toggle-option selected" data-toggle="minor" id="minorHide">Hide</div>
+					</div>
+				</h5>
+				<h5>
+					Contact lines
+					<div class="toggle-button">
+						<div class="toggle-option" data-toggle="contact" id="contact3">3</div>
+						<div class="toggle-option" data-toggle="contact" id="contact4">4</div>
+						<div class="toggle-option selected" data-toggle="contact" id="contact5">5</div>
+					</div>
+				</h5>
+				<h5>
+					Horizontal margin
+					<div class="toggle-button">
+						<div class="toggle-option selected" data-toggle="margin" id="margin1">1</div>
+						<div class="toggle-option" data-toggle="margin" id="margin2">2</div>
+						<div class="toggle-option" data-toggle="margin" id="margin3">3</div>
+						<div class="toggle-option" data-toggle="margin" id="margin4">4</div>
+						<div class="toggle-option" data-toggle="margin" id="margin5">5</div>
+						<div class="toggle-option" data-toggle="margin" id="margin6">6</div>
+					</div>
+				</h5>
+				<h5>
+					Line spacing
+					<div class="toggle-button">
+						<div class="toggle-option selected" data-toggle="line" id="line1">1</div>
+						<div class="toggle-option" data-toggle="line" id="line2">2</div>
+						<div class="toggle-option" data-toggle="line" id="line3">3</div>
+						<div class="toggle-option" data-toggle="line" id="line4">4</div>
+						<div class="toggle-option" data-toggle="line" id="line5">5</div>
+						<div class="toggle-option" data-toggle="line" id="line6">6</div>
+					</div>
+				</h5>
+				<h5>
+					Center column no.
+					<div class="toggle-button">
+						<div class="toggle-option multi-select" data-toggle="column" id="column1">1</div>
+						<div class="toggle-option multi-select" data-toggle="column" id="column2">2</div>
+						<div class="toggle-option multi-select" data-toggle="column" id="column3">3</div>
+						<div class="toggle-option multi-select selected" data-toggle="column" id="column4">4</div>
+					</div>
+				</h5>
+				
+				<br>
+				
+				<div id="customTemplateOptions" style="display: block;">
+					<h5>
+						Font type
+						<div class="toggle-button">
+							<div class="toggle-option" data-toggle="font" id="fontVerdanaSans">1</div>
+							<div class="toggle-option" data-toggle="font" id="fontVerdanaSerif">2</div>
+							<div class="toggle-option" data-toggle="font" id="fontRoboto">3</div>
+							<div class="toggle-option selected" data-toggle="font" id="fontDroid">4</div>
+						</div>
+					</h5>
+					<h5>
+						Title case
+						<div class="toggle-button">
+							<div class="toggle-option selected" data-toggle="case" id="caseNormal">Default</div>
+							<div class="toggle-option" data-toggle="case" id="caseUpper">Uppercase</div>
+						</div>
+					</h5>
+					<h5>
+						Title style
+						<div class="toggle-button">
+							<div class="toggle-option selected" data-toggle="title" id="titleRuled">Ruled</div>
+							<div class="toggle-option" data-toggle="title" id="titleShaded">Shaded</div>
+						</div>
+					</h5>
+					<h5>
+						Title rule position
+						<div class="toggle-button">
+							<div class="toggle-option" data-toggle="rule" id="ruleAbove">Above title</div>
+							<div class="toggle-option selected" data-toggle="rule" id="ruleBelow">Below title</div>
+						</div>
+					</h5>
+					<br>
+					<h5>
+						Image
+						<div class="toggle-button">
+							<div class="toggle-option" data-toggle="image" id="imageShow">Show</div>
+							<div class="toggle-option selected" data-toggle="image" id="imageHide">Hide</div>
+						</div>
+					</h5>
+					<h5>
+						Roll No
+						<div class="toggle-button">
+							<div class="toggle-option" data-toggle="roll" id="rollShow">Show</div>
+							<div class="toggle-option selected" data-toggle="roll" id="rollHide">Hide</div>
+						</div>
+					</h5>
+					<h5>
+						Course
+						<div class="toggle-button">
+							<div class="toggle-option" data-toggle="course" id="course1">1 line</div>
+							<div class="toggle-option selected" data-toggle="course" id="course2">2 lines</div>
+						</div>
+					</h5>
+					<h5>
+						Table border
+						<div class="toggle-button">
+							<div class="toggle-option" data-toggle="table" id="tableShow">Show</div>
+							<div class="toggle-option selected" data-toggle="table" id="tableHide">Hide</div>
+						</div>
+					</h5>
+					<h5>
+						Education year column
+						<div class="toggle-button">
+							<div class="toggle-option" data-toggle="edyear" id="edyearFirst">First</div>
+							<div class="toggle-option selected" data-toggle="edyear" id="edyearLat">Last</div>
+						</div>
+					</h5>
+					<h5>
+						Experience layout
+						<div class="toggle-button">
+							<div class="toggle-option" data-toggle="experience" id="experience1">L1</div>
+							<div class="toggle-option selected" data-toggle="experience" id="experience2">L2</div>
+						</div>
+					</h5>
+					<h5>
+						Projects layout
+						<div class="toggle-button">
+							<div class="toggle-option selected" data-toggle="projects" id="projects1">L1</div>
+							<div class="toggle-option" data-toggle="projects" id="projects2">L2</div>
+						</div>
+					</h5>
+					<br>
+				</div>
+
+				<h5>
+					<button class="btn btn-sm btn-block btn-primary" data-toggle="modal" data-target="#sectionToggleModal">Show/Hide sections</button>
+				</h5>
+
+				<hr>
+
+				<h3 class="text-center">Lists and points</h3>
+				<button class="btn btn-block btn-xs btn-success" onclick="insertList();">+ Insert sub-list</button>
+				<button class="btn btn-block btn-xs btn-warning" onclick="decreaseIndent();">&lt;&lt; Decrese indentation</button>
+				<button class="btn btn-block btn-xs btn-warning" onclick="increaseIndent();">&gt;&gt; Increase indentation</button>
+				<h5>
+					List style :
+					<div class="toggle-button">
+						<button class="btn btn-xs custom-button" onclick="changeListStyle(&#39;disc&#39;);">⚫</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle(&#39;circle&#39;);">⚪</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle(&#39;square&#39;);">■</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle(&#39;dash&#39;);">-</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle(&#39;decimal&#39;);">1.</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle(&#39;upper-roman&#39;);">I.</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle(&#39;lower-roman&#39;);">i.</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle(&#39;upper-alpha&#39;);">A.</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle(&#39;lower-alpha&#39;);">a.</button>
+					</div>
+				</h5>
+
+			</div>
+
+		</div>
+
+
+		<div class="col-sm-9 text-center" id="right">
+
+			<div id="page" class="droid" contenteditable="true" style="padding: 0.2cm 1cm 1cm; line-height: 1.1em;">
+
+				<div class="row" style="margin-bottom:10px;">
+				<div class="col-sm-12">
+					<div style="display: none; margin-top: 25px;" id="image_box">
+						<img src="./Resume generator_files/iitg_logo.png" height="80" width="80">
+					</div>
+					<div id="info" style="display: inline-block; margin-top: 10px; margin-left: 20px;">
+						<h2 id="contentName">Md Dilkhush Alam</h2>
+						<h5 id="contentRoll" style="display: none;">Roll Number : 14010XXXX</h5>
+						<h5 id="contentCourse" style="color: rgb(51, 51, 51);">Data Analytics&nbsp;<span style="font-weight: 700;">|&nbsp;</span>B.C.A - Bachelor of Computer Applications</h5><h5 id="contentCourse">Bhupendra Narayan Mandal University Madhepura</h5>
+					</div>
+					<div id="contact" style="float:right; display:inline-block;">+91-7763937638<br>dilkashalam026@gmail.com<br>https://github.com/dilkash722/&nbsp;<span class="light" id="contactLink1" style=""><br></span><span class="light" id="contactLink2" style="display: inline;">www.linkedin.com/in/dilkhush378/</span></div>
+				</div>
+				</div>
+
+			
+				<div class="section" id="sectionEducation" style="display: block;">
+					<div class="section-title ruled rule-below">
+						<h4 style="box-sizing: border-box; font-family: &quot;Droid Serif&quot;, serif; font-weight: 500; line-height: 1.1; color: inherit; margin-top: 15px; margin-bottom: 0px; font-size: 18px;"><b style="box-sizing: border-box; font-weight: 700; font-family: &quot;Droid Serif&quot;, serif; color: inherit;">Career Objective</b></h4><h4><div class="section" id="sectionEducation" style="font-size: 14px;"><div class="section-title ruled rule-below"></div></div><div class="section" id="sectionExperience" style="font-size: 14px;"><div class="section-title ruled rule-below"><hr class="hr-below" style="border-color: rgb(102, 102, 102);"></div><ul><li style="margin-top: 6.775px;"><p>Motivated and detail-oriented individual seeking an entry-level Data Analyst position. Eager to leverage analytical skills and technical knowledge in Python, SQL, Tableau, and data visualization to drive data-driven decision-making and enhance business strategies. Committed to transforming complex data into actionable insights and collaborating with a dynamic team to grow professionally in data analytics.</p></li></ul></div></h4><h4 style="color: rgb(51, 51, 51);"><span style="font-weight: 700;">Education</span></h4><h4 style="margin-top: 3px;"><div class="section-title ruled rule-below" style="font-size: 14px;"><hr class="hr-below" style="border-color: rgb(102, 102, 102);"></div><ul class="nobullet" style="font-size: 14px;"><li style="margin-top: 6.775px;"><table class="table borderless" id="educationTable" style="width: 678.125px;"><tbody><tr><td class="header" style="line-height: 1.42857;"><span style="font-weight: 700;">Degree / Certificate</span></td><td class="header" style="line-height: 1.42857;"><span style="font-weight: 700;">Institute / Board</span></td><td class="header" style="line-height: 1.42857;"><br></td><td class="header text-center" style="line-height: 1.42857;"><span style="font-weight: 700;">Year</span></td></tr><tr><td class="" style="line-height: 1.42857;">B.C.A<br></td><td class="" style="line-height: 1.42857;">Bhupendra Narayan Mandal University Madhepura<br></td><td class="" style="line-height: 1.42857;"><br></td><td class="text-center" style="line-height: 1.42857;">2016- 2020<br></td></tr><tr><td class="" style="line-height: 1.42857;">Senior secondary<br></td><td class="" style="line-height: 1.42857;">BSEB Patna<br></td><td class="" style="line-height: 1.42857;"><br></td><td class="text-center" style="line-height: 1.42857;">2015<br></td></tr><tr><td class="" style="line-height: 1.42857;">Secondary</td><td class="" style="line-height: 1.42857;">BSEB Patna</td><td class="" style="line-height: 1.42857;"><br></td><td class="text-center" style="line-height: 1.42857;">2013</td></tr></tbody></table></li></ul></h4></div></div><div class="section" id="sectionProjects"><div class="section-title ruled rule-below">
+						<h4><strong>Projects</strong></h4>
+						<hr class="hr-below"><ul class="disc"><li style="margin-top: 6.975px;"><div><span style="font-weight: 700;">Super Store Sales Analysis Dashboard&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Oct 2024 - Oct 2024</i><span style="font-style: italic; color: rgb(68, 68, 68); font-size: 13.5px;">&nbsp;</span><br><i>Technology:&nbsp;<i>&nbsp;Tableau&nbsp;</i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</i></div><div><ul class="circle"><li>Analyzed sales, profit, and discount by region and category.</li><li>Segmented customers by purchase behavior.</li><li>Developed interactive dashboards using bar charts, line graphs, and pie charts to provide clear insights.</li><li>Enabled dynamic filtering by region, product category, and time period for deeper analysis.</li></ul></div></li></ul><ul class="disc"><li style="margin-top: 6.975px;"><div><span style="font-weight: 700;">COVID-19 Analysis&nbsp; Dashboard&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><i>Oct 2024 - Oct 2024</i><span style="font-style: italic; color: rgb(68, 68, 68); font-size: 13.5px;">&nbsp;</span><br><i>Technology:&nbsp;<i>&nbsp;Tableau&nbsp;</i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</i></div><div><ul class="circle"><li>Tracked and visualized virus spread: confirmed cases, recoveries, deaths, and vaccination rates.</li><li>Used dynamic charts and heatmaps for trend analysis.</li><li>Enabled real-time updates, with regional and time-based filters for deeper insights.</li></ul></div></li></ul></div>
+					<ul class="disc">
+					<li>
+						<div><b>GDP Analysis&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</b><i>&nbsp;Oct 2024 - Oct 2024</i><span style="font-style: italic; color: rgb(68, 68, 68); font-size: 13.5px;">&nbsp;</span><br><i>Technology:&nbsp;<i>&nbsp;Python, Pandas, Matplotlib, Seaborn, Plotly Library, Offline Plotly Library</i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</i></div><div><ul class="circle" style="margin-left: 0px;"><li style="margin-top: 1.6875px;">Analyzed GDP values and growth for individual countries.</li><li>Created line and bar graphs for country-specific and global GDP trends.</li><li style="margin-top: 1.6875px;">Compared GDP and growth between specific countries and across all countries.</li><li style="margin-top: 1.6875px;">Exported GDP data of each country into separate files for further analysis.</li></ul></div></li>
+					</ul>
+				</div>
+
+			
+				<div class="section" id="sectionSkills">
+					<div class="section-title ruled rule-below">
+						<h4><ul class="disc" style="font-size: 14px;"><li style="margin-top: 6.975px;"><div><div class="title" style="display: inline-block;">Black Friday Sales Visualization<br></div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="font-style: italic;">Sep 2024 -&nbsp; Sep 2024</span><br><i>Technology: Python, Pandas, Matplotlib, Seaborn&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</i></div><div><ul class="circle"><li style="margin-top: 1.6875px;">Total Purchase By Gender(Pie Chart):Visualizes distribution between male and female customers.</li><li style="margin-top: 1.6875px;">Total Purchase By Age Group (Bar Chart):Categorizes purchases by age.</li><li style="margin-top: 1.6875px;">Purchase Distribution By City Category (Pie Chart) : Compares purchases in urban and rural areas.</li><li style="margin-top: 1.6875px;">Occupation-Based Purchase Insight (Bar Chart) : Analyzes purchases based on customer occupations.</li></ul></div></li><li style="margin-top: 6.975px;"><div><div class="title" style="display: inline-block;">Inventory Management System&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="font-style: italic; font-weight: 400;">Aug 2024 - Aug 2024<br></span></div><span style="font-style: italic; color: inherit;">Technology:&nbsp;python, JSON, Command-Line Interface (CLI)</span></div><div><div class="link right" style="display: inline-block;"><br></div></div><div><ul class="circle"><li style="margin-top: 1.6875px;">Displays product details from a JSON file, including ID, name, price, and quantity.</li><li style="margin-top: 1.6875px;">Users input personal details and product info to initiate purchases, with stock availability checks.</li><li style="margin-top: 1.6875px;">Generates detailed bills with a 10% discount if stock is available; informs users if stock is insufficient.</li><li style="margin-top: 1.6875px;">Updates inventory in real-time, saving changes back to the JSON file after each transaction.</li><li style="margin-top: 1.6875px;">Logs each sale in a separate text file, capturing user details, product info, quantity, and total amount.</li></ul></div></li></ul></h4><h4><strong>Technical skills</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<li style="margin-top: 3.3875px;"><span style="font-weight: 700;"><span class="skillCategory">Languages</span>&nbsp;&amp; Software :</span>&nbsp;Python, SQL, HTML, CSS&nbsp;</li><li style="margin-top: 3.3875px;"><span style="font-weight: 700;"><span class="skillCategory">Data Analysis</span>&nbsp;:</span>&nbsp;Pandas, NumPy</li><li style="margin-top: 3.3875px;"><span style="font-weight: 700;"><span class="skillCategory">Data Visualization</span>&nbsp;:</span>&nbsp;Matplotlib, Seaborn ,Plotly,&nbsp;Tableau, MS Excel, Google Sheet</li><li style="margin-top: 3.3875px;"><span style="font-weight: 700;">Database Management:</span>&nbsp;SQL, MySQL,&nbsp;</li><li style="margin-top: 3.3875px;"><span style="font-weight: 700;"><span class="skillCategory">Tools/IDE</span>&nbsp;:</span>&nbsp;Git, Jupyter Notebook,&nbsp;PyCharm, VS-Code, MySQL, Oracle 10g, MS Excel</li><li style="margin-top: 3.3875px;"><span style="font-weight: 700;">Analytical Skill :&nbsp;</span>Data Analysis, Data Cleaning</li><li style="margin-top: 3.3875px;"><span style="font-weight: 700;">Operating System (OS) :&nbsp;</span>Windows/Linux</li></ul></div><div class="section" id="sectionResponsibility" style=""><div class="section-title ruled rule-below">
+						<h4 style="color: rgb(51, 51, 51);"><span style="font-weight: 700;">Certifications</span></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+						<li style="margin-top: 3.3875px;"><strong>Python, SQL, HTML &amp; CSS (Pentagon Space, Bengaluru)</strong> – Completed comprehensive training in Python, SQL, HTML, and CSS, enhancing skills in programming, web development, and data analysis.</li><li><strong>Python (HackerRank)</strong> – Completed Python course and assessment on HackerRank, demonstrating proficiency in Python programming.</li><li><strong>Data Analytics (GeeksforGeeks)</strong> – Completed a comprehensive Data Analytics course, focusing on data manipulation, visualization, and analysis.</li>
+					</ul>
+				</div>
+
+
+				<div class="section" id="sectionAchievements" style="display: block;">
+					<div class="section-title ruled rule-below">
+						<h4 style="color: rgb(51, 51, 51);"><span style="font-weight: 700;">Personal strengths</span></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<li style="margin-top: 3.3875px;">If any of Task assigned, would you lite to take responsibility as an initiative.</li><li style="margin-top: 3.3875px;">Confident and determined.</li><li style="margin-top: 3.3875px;">Analytical Thinking .</li></ul></div><div class="section" id="sectionCourses" style="display: none;"><div class="section-title ruled rule-below">
+						<h4><strong>Personal strengths</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<div class="row">
+						<div class="col-sm-6">
+							<li>If any of Task assigned, would you lite to take responsibility as an initiative
+</li><li>Confident and determined</li><li>Analytical Thinking&nbsp;</li></div></div>
+					</ul>
+				</div>
+
+			
+				<div class="section" id="sectionCurricular" style="">
+					<div class="section-title ruled rule-below">
+						<h4 style="color: rgb(51, 51, 51);"><span style="font-weight: 700;">Field of interest (Or Research interest)</span></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<li style="margin-top: 3.3875px;">Data Visualization (Tableau)</li>
+					<li style="margin-top: 3.3875px;">Exploratory data analysis(Pandas, Matplotlib, Seaborn, Plotly)</li><li style="margin-top: 3.3875px;">Data Cleaning &amp; Preprocessing</li><li style="margin-top: 3.3875px;">Dashboard Creation and Reporting</li><li style="margin-top: 3.3875px;">Strong interest in Data Science, with a focus on Python and SQL</li>
+					</ul>
+				</div>
+
+				
+				<div class="section" id="sectionInterest">
+					<div class="section-title ruled rule-below">
+						<hr class="hr-above">
+						<h4><strong>Fields of interest (OR Research interests)</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<div class="row">
+						<div class="col-sm-6">
+							<li>Advanced XYZ</li>
+							<li>ABC design</li>
+						</div>
+						<div class="col-sm-6">
+							<li>XYZ processing</li>
+							<li>Robotics</li>
+						</div>
+					</div>
+					</ul>
+				</div>
+				
+				<div class="section" id="sectionFooterMessage" style="display: block;">
+					<div class="section-title ruled rule-below">
+						<hr class="hr-above">
+						<h6><strong>(References available on request)</strong></h6>
+					</div>
+				</div>
+
+			</div>
+			
+		</div>
+
+
+	</div>
+
+</div>
+
+
+<div class="modal fade" id="usageModal" tabindex="-1" style="display: none;">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+				<h5><strong>Note : </strong>Use <strong>Google Chrome</strong>. Other browsers are unable to print properly and don't support some features.</h5>
+				<h4><strong>Editing content</strong></h4>
+				<ul>
+					<li>Edit the Resume content just like a normal document editor (cut,copy,undo etc).</li>
+					<li>Entire sections can be added, reordered, removed just by cut,copy,pasting method. (Use "show/hide sections" button to hide but retain content)</li>
+					<li>To remove a section/point/mentor/link etc, just delete it.</li>
+					<li>For styled/formatted text, select the text portion and press <kbd>Ctrl+b</kbd> for bold, <kbd>Ctrl+i</kbd> for italics, <kbd>Ctrl+u</kbd> for underlined text.</li>
+					<li>Use "Insert sub-list" button to insert sub-points in a point. (like as in achivements section)</li>
+					<li>Change indentation and bullet style of the list where your cursor is placed.</li>
+				</ul>
+				<h4><strong>Editing template</strong></h4>
+				<ul>
+					<li>Use the options in the left panel to modify the template/look.</li>
+					<li>In case you want to use a different template than the official IITG template, choose the corresponding button to see other setting options. (For on-campus purpose, you must use official IITG template)</li>
+				</ul>
+				<h4><strong>Saving</strong></h4>
+				<ul>
+					<li>Close any popup box (like this instructions popup	) if opened. Press <kbd>Ctrl+s</kbd></li>
+					<li>This will save the webpage (a .html file and a folder will be saved. Keep them together)</li>
+					<li>Open the .html file in browser from your PC.</li>
+					<li>This way, you can maintain multiple saved copies for each profile/template on your PC.</li>
+				</ul>
+				<h4><strong>Print as PDF</strong></h4>
+				<ul>
+					<li>Adjust margin in the Chrome's print dialog box. You may need it if a section is getting split between two pages. Print each page separately with different margins if needed.</li>
+					<li>If URLs or some stray text is being shown in print preview, disable the options "Include headers and footers","Include background graphics" etc in the print dialog box.</li>
+				</ul>
+				<h4><strong>Merge and compress PDFs</strong></h4>
+				<ul>
+					<li>If you can run python file on your machine, use the script provided on <a class="blue" target="_blank" href="https://github.com/nitish6174/resume-generator">project's github</a></li>
+					<li><a class="blue" target="_blank" href="http://www.pdfmerge.com/">pdfmerge.com/</a> is one of the best sites available for this task.</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="sectionToggleModal" tabindex="-1" style="display: none;">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+				<div class="checkbox"><label><input type="checkbox" name="sectionToggle" value="sectionEducation" checked="checked">Education</label></div>
+				<div class="checkbox"><label><input type="checkbox" name="sectionToggle" checked="true" value="sectionExperience">Experience</label></div>
+				<div class="checkbox"><label><input type="checkbox" name="sectionToggle" value="sectionPublications">Publications</label></div>
+				<div class="checkbox"><label><input type="checkbox" name="sectionToggle" checked="true" value="sectionProjects">Projects</label></div>
+				<div class="checkbox"><label><input type="checkbox" name="sectionToggle" checked="true" value="sectionSkills">Technical Skills</label></div>
+				<div class="checkbox"><label><input type="checkbox" name="sectionToggle" value="sectionResponsibility" checked="checked">Positions of Responsibility</label></div>
+				<div class="checkbox"><label><input type="checkbox" name="sectionToggle" value="sectionAchievements" checked="checked">Achievements</label></div>
+				<div class="checkbox"><label><input type="checkbox" name="sectionToggle" value="sectionCourses">Key courses taken</label></div>
+				<div class="checkbox"><label><input type="checkbox" name="sectionToggle" value="sectionCurricular" checked="checked">Extra curriculars</label></div>
+				<div class="checkbox"><label><input type="checkbox" name="sectionToggle" value="sectionFooterMessage" checked="checked">References message</label></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script type="text/javascript" src="./Resume generator_files/jquery.min.js.download"></script>
+<script type="text/javascript" src="./Resume generator_files/bootstrap.min.js.download"></script>
+<script type="text/javascript" src="./Resume generator_files/main.js.download"></script>
+
+
+
+</body></html>
